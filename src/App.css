@@ -1,0 +1,103 @@
+.App {
+  color: #777;
+  font-size: 14px;
+  line-height: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  background-color: white;;
+  height: 15px;
+  padding: 15px;
+  color: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.App-body {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    flex-grow: 1;
+}
+
+@media (min-width: 992px) {
+    .col-md-4 {
+        grid-column: span 4;
+    }
+    .col-md-8 {
+        grid-column: span 8;
+    }
+
+}
+
+
+.Reporter {
+  background: white;
+}
+
+.Suite {
+  height: 100vh;
+  padding-top: 10px;
+}
+
+.Suite-title {
+  border-left: 10px solid white;
+}
+
+
+.Test {
+  border-left: 10px solid white;
+  padding-left: 10px;
+  padding-bottom: 10px;
+  line-height: 20px;
+}
+
+.Test.success, .Suite-title.success {
+  border-color: #72cc72
+}
+
+.Test.failure, .Suite-title.failure {
+  border-color: tomato;
+}
+
+.Test-title {
+  padding-bottom: 10px;
+}
+
+.Test-log {
+  margin-left: 10px;
+  background-color: #f0f2f3;
+  height: 200px;
+}
+
+.Test-command {
+  display: flex;
+  flex-direction: row;
+  padding: 0 10px;
+  line-height: 30px;
+}
+
+.Test-command .index {
+  width: 20px;
+  margin-right: 10px;
+  font-family: monospace;
+  color: #999;
+}
+
+.Test-command .method {
+  padding-right: 10px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.Test-command .summary {
+  flex-grow: 1;
+  text-align: left;
+  color: #999;
+}
+
+
+.Runner {
+  background: #f3f2f0;
+}
